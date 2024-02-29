@@ -1,3 +1,4 @@
+@if(isset($breadcrumb))
 <section class="breadcrumb__section breadcrumb__bg">
     <div class="container">
         <div class="row row-cols-1">
@@ -12,3 +13,4 @@
         </div>
     </div>
 </section>
+@endif

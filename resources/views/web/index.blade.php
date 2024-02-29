@@ -13,7 +13,7 @@
 <!-- End product section -->
 
 <!-- Start product section -->
-<section class="product__section section--padding  pt-0">
+<section class="product__section section--padding  pt-0" style="display:none;">
     <div class="container">
         <div class="section__heading border-bottom mb-30">
             <h2 class="section__heading--maintitle">Latest <span>Products</span></h2>
@@ -178,7 +178,7 @@
                                         <a class="single__product--cart__btn" href="{{ URL::to('product-details/') }}/{{$dealProduct[0]->product_slug}}">
                                             Add to cart
                                         </a>
-                                    </li>                                    
+                                    </li>
                                 </ul>
                             </div>
                         </div>

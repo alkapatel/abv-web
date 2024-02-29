@@ -48,6 +48,7 @@ class pagesController extends Controller
     {
         $data = array();
         $data['page_title'] = 'Products';
+        $data['breadcrumb'] = 'Products';
         $proData = new Product; 
         $product =  $proData->get_Allproduct();
         $data['productData']=$product;
@@ -111,12 +112,14 @@ class pagesController extends Controller
     {
         $data = array();
         $data['page_title'] = 'Terms And Conditions';
+        $data['breadcrumb'] = 'Terms And Conditions';
         return view('web.termsAndConditions', $data);
     }
     public function refundAndCancellationPolicy()
     {
         $data = array();
         $data['page_title'] = 'Refund And Cancellation Policy';
+        $data['breadcrumb'] = 'Refund And Cancellation Policy';
         return view('web.refundAndCancellationPolicy', $data);
     }
     public function deliveryAndShippingPolicy()

@@ -17,7 +17,7 @@ $(document).ready(function() {
                             type: 'success',
                             delay: 4000
                         });
-                        window.location = '/';
+                        window.location = $('#submit-form').attr('redirect');
                     } else {
                         $.bootstrapGrowl(result.msg, {
                             type: 'danger',

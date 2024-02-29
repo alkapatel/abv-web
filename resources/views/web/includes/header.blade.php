@@ -1,5 +1,6 @@
 <?php
 $cartCounter = \App\Models\Carts::cartCounter();
+$crrRoute = \Route::currentRouteName();
 ?>
 <header class="header__section">
     <div class="header__topbar bg__primary">
@@ -7,13 +8,7 @@ $cartCounter = \App\Models\Carts::cartCounter();
             <div class="header__topbar--inner d-flex align-items-center justify-content-between">
                 <ul class="header__topbar--info d-none d-lg-flex">
                     <li class="header__info--list">
-                        <a class="header__info--link text-white" href="shop.html">STORES</a>
-                    </li>
-                    <li class="header__info--list">
-                        <a class="header__info--link text-white" href="shop.html">DELIVERY</a>
-                    </li>
-                    <li class="header__info--list">
-                        <a class="header__info--link text-white" href="shop.html">GUARANTEE</a>
+                        <a class="header__info--link text-white" href="{{route('web.contact')}}">Mon - Sat 9.00 - 19.00</a>
                     </li>
                     <li class="header__info--list">
                         <a class="header__info--link text-white" href="mailto:info@abvtool.in">
@@ -101,16 +96,16 @@ $cartCounter = \App\Models\Carts::cartCounter();
                     <nav class="header__menu--navigation">
                         <ul class="header__menu--wrapper d-flex">
                             <li class="header__menu--items">
-                                <a class="header__menu--link" href="{{ route('web.index') }}">Home</a>
+                                <a class="header__menu--link {{ ($crrRoute == 'web.index')?'active':'' }}" href="{{ route('web.index') }}">Home</a>
                             </li>
                             <li class="header__menu--items">
-                                <a class="header__menu--link" href="{{ route('web.products') }}">Products</a>
+                                <a class="header__menu--link {{ ($crrRoute == 'web.products')?'active':'' }}" href="{{ route('web.products') }}">Products</a>
                             </li>
                             <li class="header__menu--items">
-                                <a class="header__menu--link" href="{{ route('web.about') }}">About</a>
+                                <a class="header__menu--link {{ ($crrRoute == 'web.about')?'active':'' }}" href="{{ route('web.about') }}">About</a>
                             </li>
                             <li class="header__menu--items">
-                                <a class="header__menu--link" href="{{ route('web.contact') }}">Contact</a>
+                                <a class="header__menu--link {{ ($crrRoute == 'web.contact')?'active':'' }}" href="{{ route('web.contact') }}">Contact</a>
                             </li>
                         </ul>
                     </nav>
@@ -192,40 +187,6 @@ $cartCounter = \App\Models\Carts::cartCounter();
                         </span>
                         <span class="offcanvas__account--items__label">Login / Register</span>
                     </a>
-                </div>
-                <div class="offcanvas__account--wrapper d-flex">
-                    <div class="offcanvas__account--currency">
-                        <a class="offcanvas__account--currency__menu d-flex align-items-center text-black" href="javascript:void(0)">
-                            <img src="{{ asset('web/assets/img/icon/usd-icon.webp') }}" alt="currency">
-                            <span>USD</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="9.797" height="6.05" viewBox="0 0 9.797 6.05">
-                                <path d="M14.646,8.59,10.9,12.329,7.151,8.59,6,9.741l4.9,4.9,4.9-4.9Z" transform="translate(-6 -8.59)" fill="currentColor" opacity="0.7" />
-                            </svg>
-                        </a>
-                        <div class="offcanvas__account--currency__submenu">
-                            <ul>
-                                <li class="currency__items"><a class="currency__text" href="#">CAD</a></li>
-                                <li class="currency__items"><a class="currency__text" href="#">CNY</a></li>
-                                <li class="currency__items"><a class="currency__text" href="#">EUR</a></li>
-                                <li class="currency__items"><a class="currency__text" href="#">GBP</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="language__currency--list">
-                        <a class="offcanvas__language--switcher" href="javascript:void(0)">
-                            <span>English</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="9.797" height="6.05" viewBox="0 0 9.797 6.05">
-                                <path d="M14.646,8.59,10.9,12.329,7.151,8.59,6,9.741l4.9,4.9,4.9-4.9Z" transform="translate(-6 -8.59)" fill="currentColor" opacity="0.7" />
-                            </svg>
-                        </a>
-                        <div class="offcanvas__dropdown--language">
-                            <ul>
-                                <li class="language__items"><a class="language__text" href="#">France</a></li>
-                                <li class="language__items"><a class="language__text" href="#">Russia</a></li>
-                                <li class="language__items"><a class="language__text" href="#">Spanish</a></li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
             </nav>
         </div>

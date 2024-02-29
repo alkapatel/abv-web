@@ -3,7 +3,7 @@
 <!-- Start login section  -->
 <div class="login__section section--padding">
     <div class="container">
-        {!! Form::open(['route' => 'web.check-login', 'id' => 'submit-form']) !!}
+        {!! Form::open(['route' => 'web.check-login', 'id' => 'submit-form', 'redirect'=>url('/')]) !!}
         <div class="login__section--inner">
             <div class="row row-cols-md-2 justify-content-center">
                 <div class="col">

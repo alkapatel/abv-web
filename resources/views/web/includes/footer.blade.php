@@ -66,21 +66,6 @@
                 </div>
                 <div class="col-lg-3 col-md-4">
                     <div class="footer__widget">
-                        <h2 class="footer__widget--title ">Pages <button class="footer__widget--button" aria-label="footer widget button"></button>
-                            <svg class="footer__widget--title__arrowdown--icon" xmlns="http://www.w3.org/2000/svg" width="12.355" height="8.394" viewBox="0 0 10.355 6.394">
-                                <path d="M15.138,8.59l-3.961,3.952L7.217,8.59,6,9.807l5.178,5.178,5.178-5.178Z" transform="translate(-6 -8.59)" fill="currentColor"></path>
-                            </svg>
-                        </h2>
-                        <ul class="footer__widget--menu footer__widget--inner">
-
-                            <li class="footer__widget--menu__list"><a class="footer__widget--menu__text" href="{{ route('web.contact') }}">Contact Us</a></li>
-                            <li class="footer__widget--menu__list"><a class="footer__widget--menu__text" href="{{ route('web.about') }}">About Us</a></li>
-                            <li class="footer__widget--menu__list"><a class="footer__widget--menu__text" href="{{ route('web.login') }}">Login</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4">
-                    <div class="footer__widget">
                         <h2 class="footer__widget--title ">Useful Links<button class="footer__widget--button" aria-label="footer widget button"></button>
                             <svg class="footer__widget--title__arrowdown--icon" xmlns="http://www.w3.org/2000/svg" width="12.355" height="8.394" viewBox="0 0 10.355 6.394">
                                 <path d="M15.138,8.59l-3.961,3.952L7.217,8.59,6,9.807l5.178,5.178,5.178-5.178Z" transform="translate(-6 -8.59)" fill="currentColor"></path>
@@ -91,6 +76,21 @@
                             <li class="footer__widget--menu__list"><a class="footer__widget--menu__text" href="{{ route('web.privacy-policy') }}">Privacy Policy</a></li>
                             <li class="footer__widget--menu__list"><a class="footer__widget--menu__text" href="{{ route('web.refund-and-cancellation-policy') }}">Refund & Cancellation Policy</a></li>
                             <li class="footer__widget--menu__list"><a class="footer__widget--menu__text" href="{{ route('web.delivery-and-shipping-policy') }}">Delivery & Shipping Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <div class="footer__widget">
+                        <h2 class="footer__widget--title ">Pages <button class="footer__widget--button" aria-label="footer widget button"></button>
+                            <svg class="footer__widget--title__arrowdown--icon" xmlns="http://www.w3.org/2000/svg" width="12.355" height="8.394" viewBox="0 0 10.355 6.394">
+                                <path d="M15.138,8.59l-3.961,3.952L7.217,8.59,6,9.807l5.178,5.178,5.178-5.178Z" transform="translate(-6 -8.59)" fill="currentColor"></path>
+                            </svg>
+                        </h2>
+                        <ul class="footer__widget--menu footer__widget--inner">
+
+                            <li class="footer__widget--menu__list"><a class="footer__widget--menu__text" href="{{ route('web.contact') }}">Contact Us</a></li>
+                            <li class="footer__widget--menu__list"><a class="footer__widget--menu__text" href="{{ route('web.about') }}">About Us</a></li>
+                            <li class="footer__widget--menu__list"><a class="footer__widget--menu__text" href="{{ route('web.login') }}">Login</a></li>
                         </ul>
                     </div>
                 </div>
@@ -114,9 +114,9 @@
     <div class="footer__bottom">
         <div class="container">
             <div class="footer__bottom--inenr d-flex justify-content-between align-items-center">
-                <p class="copyright__content"><span class="text__secondary">© 2022</span> Powered by <a class="copyright__content--link" target="_blank" href="https://themeforest.net/search/hooktheme">Hooktheme</a> . All Rights Reserved.</p>
+                <p class="copyright__content"><span class="text__secondary">© {{date('Y')}}</span> Powered by <a class="copyright__content--link" target="_blank" href="{{url('/')}}">abvtool</a> . All Rights Reserved.</p>
                 <div class="footer__payment">
-                    <img src="{{ asset('web/assets/img/icon/payment-img.webp') }}" alt="payment-img">
+                    <!-- <img src="{{ asset('web/assets/img/icon/payment-img.webp') }}" alt="payment-img"> -->
                 </div>
             </div>
         </div>
